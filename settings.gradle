@@ -1,0 +1,2 @@
+rootProject.name='ToDoListSQlite'
+include ':app'
