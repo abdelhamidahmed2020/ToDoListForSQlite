@@ -41,10 +41,8 @@ public class MainActivity extends AppCompatActivity {
         addNewItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                startActivityForResult(
-                        new Intent(MainActivity.this,NewToDoItem.class).setAction(Intent.ACTION_GET_CONTENT),1);
-           finish();
+                startActivity(new Intent(MainActivity.this,NewToDoItem.class));
+                finish();
             }
         });
 
@@ -72,24 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1) {
-            // Make sure the request was successful
-            if (resultCode == RESULT_OK) {
-                Toast.makeText(this, "new Result", Toast.LENGTH_SHORT).show();
-
-                adapter.notifyDataSetChanged();
-            }
-            else{
-                Toast.makeText(this, "Wrong Result Code", Toast.LENGTH_SHORT).show();
-            }
-        }else{
-            Toast.makeText(this, "Wrong Request Code", Toast.LENGTH_SHORT).show();
-        }
-
-    }
 
 
 
