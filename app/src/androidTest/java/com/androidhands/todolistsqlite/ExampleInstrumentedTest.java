@@ -1,4 +1,4 @@
-package com.suecal.todolistsqlite;
+package com.androidhands.todolistsqlite;
 
 import android.content.Context;
 

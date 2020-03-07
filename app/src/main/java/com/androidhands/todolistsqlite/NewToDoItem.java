@@ -1,9 +1,8 @@
-package com.suecal.todolistsqlite;
+package com.androidhands.todolistsqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
