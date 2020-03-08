@@ -60,19 +60,12 @@ public class MainActivity extends AppCompatActivity {
             toDoModelList.addAll(newItems);
 
         }else{
-            toDoModelList.add(new ToDoModel("Buy Orange","2020-03-07","11:00 AM",false));
+            toDoModelList.add(new ToDoModel("Attend morning meeting","2020-03-07","11:00 AM",false));
         }
         adapter = new ToDoRecyclerAdapter(toDoModelList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-
     }
-
-
-
-
-
-
 }
 
 
