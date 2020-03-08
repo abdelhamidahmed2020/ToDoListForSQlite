@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
    public RecyclerView.Adapter adapter;
    public List<ToDoModel> toDoModelList = new ArrayList<>();
 
-
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
             List<ToDoModel> newItems = gson.fromJson(json, typeToken.getType());
             Log.d("TAG", "onActivityResult: "+gson.toJson(newItems));
             toDoModelList.addAll(newItems);
+
+
+
 
         }else{
             toDoModelList.add(new ToDoModel("Attend morning meeting","2020-03-07","11:00 AM",false));
